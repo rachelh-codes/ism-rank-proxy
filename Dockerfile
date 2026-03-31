@@ -1,4 +1,6 @@
 FROM node:20-slim
+# This new line creates a safe folder for your app
+WORKDIR /app
 RUN npm install express cors axios
 COPY . .
 RUN echo "const express = require('express'); \
